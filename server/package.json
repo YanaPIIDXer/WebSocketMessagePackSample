@@ -8,5 +8,9 @@
   "devDependencies": {
     "@types/node": "^20.1.0",
     "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "msgpack5": "^6.0.2",
+    "ws": "^8.13.0"
   }
 }
