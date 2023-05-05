@@ -1,9 +1,12 @@
 import msgpack from "msgpack5";
+import WebSocket from "ws";
 
 const packer = msgpack();
+const encoded: Buffer = packer.encode(["hoge", 15]).slice();
 
-const encoded = packer.encode({name: "hoge", age: 15});
-console.info("encoded", encoded);
-
-const decoded = packer.decode(encoded);
-console.info("decoded", decoded);
+const socket = new WebSocket("ws://localhost:3000");
+socket.onopen = () => {
+  socket.send(encoded, () => {
+    socket.close();
+  });
+}
