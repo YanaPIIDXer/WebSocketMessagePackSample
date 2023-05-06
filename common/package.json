@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc && tsc -d"
   },
   "devDependencies": {
     "@types/msgpack5": "^3.4.3",
