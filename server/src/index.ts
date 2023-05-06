@@ -10,7 +10,7 @@ const server = new WebSocket.Server({
 server.on("connection", (socket: WebSocket) => {
   console.info("Client Connected.");
   socket.on("message", (data: Buffer) => {
-    const packet = new ExamplePacket(0, "");
+    const packet = new ExamplePacket();
     packet.decode(data);
     console.info(packet.hoge, packet.fuga);
   });
