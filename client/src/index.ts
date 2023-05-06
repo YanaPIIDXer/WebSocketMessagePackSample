@@ -1,8 +1,8 @@
 import msgpack from "msgpack5";
 import WebSocket from "ws";
+import { ExamplePacket } from "@yanapiidxer/websocket-messagepack-common";
 
-const packer = msgpack();
-const encoded: Buffer = packer.encode(["hoge", 15]).slice();
+const encoded: Buffer = new ExamplePacket(20, "fuga").encode();
 
 const socket = new WebSocket("ws://localhost:3000");
 socket.onopen = () => {
