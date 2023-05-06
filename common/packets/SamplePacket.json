@@ -1,0 +1,14 @@
+{
+  "name": "SamplePacket",
+  "packetId": "sample",
+  "props": [
+    {
+      "name": "hoge",
+      "type": "number"
+    },
+    {
+      "name": "fuga",
+      "type": "string"
+    }
+  ]
+}
